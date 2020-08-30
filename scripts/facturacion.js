@@ -69,7 +69,7 @@ function validarDesc(descuento, error_p){
     return true;
   }
   else{
-    error_p.textContent += " Descuento no puede ser mayor a 100."
+    error_p.textContent += " Descuento no puede ser vacio ni mayor a 100."
     return false;
   }
 }
@@ -254,7 +254,7 @@ facturar.addEventListener("click", () => {
     descuentoDoc_p.textContent = "Descuento del documento : " + descDoc.toFixed(2) + " " + tipoCambio.value;
     totalDoc_p.textContent = "TOTAL del documento : " + total.toFixed(2) + " " + tipoCambio.value;
 
-    alert(`Factura \n Fecha de factura : ${fecha.value}\n Nombre del cliente : ${clienteNombre.value}/n Tipo de cambio : ${tipoCambio.value}\n Partida 1:\n  Importe : ${importeP1}\n  IVA : ${impuestoP1}\n  Descuento : ${descuentoP1}\n  Total : ${totalP1}\n Partida 2:\n  Importe : ${importeP2}\n  IVA : ${impuestoP2}\n  Descuento : ${descuentoP2}\n  Total : ${totalP2}\n Partida 3:\n  Importe : ${importeP3}\n  IVA : ${impuestoP3}\n  Descuento : ${descuentoP3}\n  Total : ${totalP3}\n TOTAL\n Importe total : ${importeTotal}\n Descuento : ${descDoc}\n TOTAL : ${total}`);
+    alert(`Factura \n Fecha de factura : ${fecha.value}\n Nombre del cliente : ${clienteNombre.value}\n Tipo de cambio : ${tipoCambio.value}\n Partida 1:\n  Importe : ${importeP1}\n  IVA : ${impuestoP1}\n  Descuento : ${descuentoP1}\n  Total : ${totalP1}\n Partida 2:\n  Importe : ${importeP2}\n  IVA : ${impuestoP2}\n  Descuento : ${descuentoP2}\n  Total : ${totalP2}\n Partida 3:\n  Importe : ${importeP3}\n  IVA : ${impuestoP3}\n  Descuento : ${descuentoP3}\n  Total : ${totalP3}\n TOTAL\n Importe total : ${importeTotal}\n Descuento : ${descDoc}\n TOTAL : ${total}`);
 
 
     }
