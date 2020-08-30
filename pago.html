@@ -54,30 +54,28 @@
         <form class="" name="pago">
           <div class="form-group">
             <label for="fechaDocumento">Fecha del documento:</label>
-            <input type="date" class="form-control" name="fechaDocumento" value="" placeholder="Feche del documento"><br>
+            <input type="date" class="form-control" id="fechaDocumento" value="" placeholder="Feche del documento"><br>
             <label for="clienteClave">Clave del cliente:</label>
-            <input type="text" class="form-control" name="clienteClave" value="" placeholder="Clave del cliente"><br>
+            <input type="text" class="form-control" id="clienteClave" value="" placeholder="Clave del cliente"><br>
             <label for="clienteNombre">Nombre del cliente:</label>
-            <input type="text" class="form-control" name="clienteNombre" value="" placeholder="Nombre del cliente"><br>
+            <input type="text" class="form-control" id="clienteNombre" value="" placeholder="Nombre del cliente"><br>
             <label for="tipoCambio">Tipo de cambio:</label>
-            <select name="tipoCambio" class="form-control">
+            <select id="tipoCambio" class="form-control">
               <option selected>MXN</option>
               <option>USD</option>
             </select><br>
             <label for="total">Total de pago:</label>
-            <input type="text" class="form-control" name="pago" value="" placeholder="Total de pago"><br>
-
+            <input type="text" class="form-control" id="pago" value="" placeholder="Total de pago"><br>
 
           </div>
           <button type="button" class="btn btn-primary" id="pagar">Pagar</button>
         </form>
 
         <p id="error" class="text-danger"></p>
-        <p id="max"></p>
-        <p id="min"></p>
-        <p id="avg"></p>
+        <p id="restante"></p>
       </div>
     </div>
 
   </body>
+  <script type="text/javascript" src="scripts/pago.js"></script>
 </html>

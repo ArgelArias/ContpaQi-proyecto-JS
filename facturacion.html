@@ -53,13 +53,13 @@
         <form class="" name="factura">
           <div class="form-group">
             <label for="fechaDocumento">Fecha del documento:</label>
-            <input type="date" class="form-control" name="fechaDocumento" value="" placeholder="Feche del documento"><br>
+            <input type="date" class="form-control" id="fechaDocumento" value="" placeholder="Feche del documento"><br>
             <label for="clienteClave">Clave del cliente:</label>
-            <input type="text" class="form-control" name="clienteClave" value="" placeholder="Clave del cliente"><br>
+            <input type="text" class="form-control" id="clienteClave" value="" placeholder="Clave del cliente"><br>
             <label for="clienteNombre">Nombre del cliente:</label>
-            <input type="text" class="form-control" name="clienteNombre" value="" placeholder="Nombre del cliente"><br>
+            <input type="text" class="form-control" id="clienteNombre" value="" placeholder="Nombre del cliente"><br>
             <label for="tipoCambio">Tipo de cambio:</label>
-            <select name="tipoCambio" class="form-control">
+            <select id="tipoCambio" class="form-control">
               <option selected>MXN</option>
               <option>USD</option>
             </select>
@@ -68,62 +68,83 @@
               <p>Partida 1</p>
               <form class="" name="partida1">
                 <label for="cantidad1">Cantidad:</label>
-                <input type="text" class="form-control" name="cantidad1" value="" placeholder="Cantidad"><br>
+                <input type="text" class="form-control" id="cantidad1" value="" placeholder="Cantidad"><br>
                 <label for="codProd1">Codigo de producto:</label>
-                <input type="text" class="form-control" name="codProd1" value="" placeholder="Codigo de producto"><br>
+                <input type="text" class="form-control" id="codProd1" value="" placeholder="Codigo de producto"><br>
                 <label for="precio1">Precio:</label>
-                <input type="text" class="form-control" name="precio1" value="" placeholder="Precio"><br>
+                <input type="text" class="form-control" id="precio1" value="" placeholder="Precio"><br>
                 <label for="iva1">Porcentaje de IVA:</label>
-                <input type="text" class="form-control" name="iva1" value="" placeholder="Porcentaje de IVA"><br>
+                <input type="text" class="form-control" id="iva1" value="" placeholder="Porcentaje de IVA"><br>
                 <label for="descuento1">Porcentaje de descuento del movimiento:</label>
-                <input type="text" class="form-control" name="descuento1" value="" placeholder="Porcentaje de descuento del movimiento"><br>
+                <input type="text" class="form-control" id="descuento1" value="" placeholder="Porcentaje de descuento del movimiento"><br>
                 <button type="button" class="btn btn-primary" id="calcular1">Calcular</button>
               </form>
+              <p id="error1" class="text-danger"></p>
+              <p id="impTotal1"></p>
+              <p id="impuesto1"></p>
+              <p id="impDesc1"></p>
+              <p id="total1"></p>
             </div>
 
             <div class="jumbotron">
               <p>Partida 2</p>
               <form class="" name="partida2">
                 <label for="cantidad2">Cantidad:</label>
-                <input type="text" class="form-control" name="cantidad2" value="" placeholder="Cantidad"><br>
+                <input type="text" class="form-control" id="cantidad2" value="" placeholder="Cantidad"><br>
                 <label for="codProd2">Codigo de producto:</label>
-                <input type="text" class="form-control" name="codProd2" value="" placeholder="Codigo de producto"><br>
+                <input type="text" class="form-control" id="codProd2" value="" placeholder="Codigo de producto"><br>
                 <label for="precio2">Precio:</label>
-                <input type="text" class="form-control" name="precio2" value="" placeholder="Precio"><br>
+                <input type="text" class="form-control" id="precio2" value="" placeholder="Precio"><br>
                 <label for="iva2">Porcentaje de IVA:</label>
-                <input type="text" class="form-control" name="iva2" value="" placeholder="Porcentaje de IVA"><br>
+                <input type="text" class="form-control" id="iva2" value="" placeholder="Porcentaje de IVA"><br>
                 <label for="descuento2">Porcentaje de descuento del movimiento:</label>
-                <input type="text" class="form-control" name="descuento2" value="" placeholder="Porcentaje de descuento del movimiento"><br>
+                <input type="text" class="form-control" id="descuento2" value="" placeholder="Porcentaje de descuento del movimiento"><br>
                 <button type="button" class="btn btn-primary" id="calcular2">Calcular</button>
               </form>
+              <p id="error2" class="text-danger"></p>
+              <p id="impTotal2"></p>
+              <p id="impuesto2"></p>
+              <p id="impDesc2"></p>
+              <p id="total2"></p>
             </div>
 
             <div class="jumbotron">
               <p>Partida 3</p>
               <form class="" name="partida3">
                 <label for="cantidad3">Cantidad:</label>
-                <input type="text" class="form-control" name="cantidad3" value="" placeholder="Cantidad"><br>
+                <input type="text" class="form-control" id="cantidad3" value="" placeholder="Cantidad"><br>
                 <label for="codProd3">Codigo de producto:</label>
-                <input type="text" class="form-control" name="codProd3" value="" placeholder="Codigo de producto"><br>
+                <input type="text" class="form-control" id="codProd3" value="" placeholder="Codigo de producto"><br>
                 <label for="precio3">Precio:</label>
-                <input type="text" class="form-control" name="precio3" value="" placeholder="Precio"><br>
+                <input type="text" class="form-control" id="precio3" value="" placeholder="Precio"><br>
                 <label for="iva3">Porcentaje de IVA:</label>
-                <input type="text" class="form-control" name="iva3" value="" placeholder="Porcentaje de IVA"><br>
+                <input type="text" class="form-control" id="iva3" value="" placeholder="Porcentaje de IVA"><br>
                 <label for="descuento3">Porcentaje de descuento del movimiento:</label>
-                <input type="text" class="form-control" name="descuento3" value="" placeholder="Porcentaje de descuento del movimiento"><br>
+                <input type="text" class="form-control" id="descuento3" value="" placeholder="Porcentaje de descuento del movimiento"><br>
                 <button type="button" class="btn btn-primary" id="calcular3">Calcular</button>
               </form>
+              <p id="error3" class="text-danger"></p>
+              <p id="impTotal3"></p>
+              <p id="impuesto3"></p>
+              <p id="impDesc3"></p>
+              <p id="total3"></p>
             </div>
+
           </div>
-          <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+          <label for="descuento">Descuento global del documento:</label>
+          <input type="text" class="form-control" id="descuento" value="" placeholder="Descuento global"><br>
+          <button type="button" class="btn btn-primary" id="facturar">Facturar</button>
         </form>
 
-        <p id="error" class="text-danger"></p>
-        <p id="max"></p>
-        <p id="min"></p>
-        <p id="avg"></p>
+        <p id="errorDoc" class="text-danger"></p>
+        <p id="impTotalDoc"></p>
+        <p id="impuestoDoc"></p>
+        <p id="impDescDoc"></p>
+        <p id="descuentoTotal"></p>
+        <p id="totalDoc"></p>
       </div>
     </div>
 
   </body>
+  <script type="text/javascript" src="scripts/facturacion.js"></script>
 </html>
