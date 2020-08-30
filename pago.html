@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" madeby="Carlos Argel Arias Cerda">
-    <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Proyecto ContpaQi Pago</title>
@@ -50,11 +50,32 @@
 
     <div class="container">
       <div class="jumbotron">
-        <h2>Menu</h2>
-        <a href="facturacion.html" class="btn btn-primary">Facturacion</a><br><br>
-        <a href="pago.html" class="btn btn-primary">Pago</a><br><br>
-        <a href="calculo.html" class="btn btn-primary">Procesos de Calculo</a><br><br>
-        <a href="cadenas_texto.html" class="btn btn-primary">Manejo de cadenas de texto</a><br>
+        <h2>Favor de introducir los datos de caida de lluvia diarios:</h2>
+        <form class="" name="pago">
+          <div class="form-group">
+            <label for="fechaDocumento">Fecha del documento:</label>
+            <input type="date" class="form-control" name="fechaDocumento" value="" placeholder="Feche del documento"><br>
+            <label for="clienteClave">Clave del cliente:</label>
+            <input type="text" class="form-control" name="clienteClave" value="" placeholder="Clave del cliente"><br>
+            <label for="clienteNombre">Nombre del cliente:</label>
+            <input type="text" class="form-control" name="clienteNombre" value="" placeholder="Nombre del cliente"><br>
+            <label for="tipoCambio">Tipo de cambio:</label>
+            <select name="tipoCambio" class="form-control">
+              <option selected>MXN</option>
+              <option>USD</option>
+            </select><br>
+            <label for="total">Total de pago:</label>
+            <input type="text" class="form-control" name="pago" value="" placeholder="Total de pago"><br>
+
+
+          </div>
+          <button type="button" class="btn btn-primary" id="pagar">Pagar</button>
+        </form>
+
+        <p id="error" class="text-danger"></p>
+        <p id="max"></p>
+        <p id="min"></p>
+        <p id="avg"></p>
       </div>
     </div>
 

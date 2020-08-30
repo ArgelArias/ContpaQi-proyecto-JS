@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" madeby="Carlos Argel Arias Cerda">
-    <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Proyecto ContpaQi Facturacion</title>
@@ -50,11 +50,78 @@
 
     <div class="container">
       <div class="jumbotron">
-        <h2>Menu</h2>
-        <a href="facturacion.html" class="btn btn-primary">Facturacion</a><br><br>
-        <a href="pago.html" class="btn btn-primary">Pago</a><br><br>
-        <a href="calculo.html" class="btn btn-primary">Procesos de Calculo</a><br><br>
-        <a href="cadenas_texto.html" class="btn btn-primary">Manejo de cadenas de texto</a><br>
+        <form class="" name="factura">
+          <div class="form-group">
+            <label for="fechaDocumento">Fecha del documento:</label>
+            <input type="date" class="form-control" name="fechaDocumento" value="" placeholder="Feche del documento"><br>
+            <label for="clienteClave">Clave del cliente:</label>
+            <input type="text" class="form-control" name="clienteClave" value="" placeholder="Clave del cliente"><br>
+            <label for="clienteNombre">Nombre del cliente:</label>
+            <input type="text" class="form-control" name="clienteNombre" value="" placeholder="Nombre del cliente"><br>
+            <label for="tipoCambio">Tipo de cambio:</label>
+            <select name="tipoCambio" class="form-control">
+              <option selected>MXN</option>
+              <option>USD</option>
+            </select>
+
+            <div class="jumbotron">
+              <p>Partida 1</p>
+              <form class="" name="partida1">
+                <label for="cantidad1">Cantidad:</label>
+                <input type="text" class="form-control" name="cantidad1" value="" placeholder="Cantidad"><br>
+                <label for="codProd1">Codigo de producto:</label>
+                <input type="text" class="form-control" name="codProd1" value="" placeholder="Codigo de producto"><br>
+                <label for="precio1">Precio:</label>
+                <input type="text" class="form-control" name="precio1" value="" placeholder="Precio"><br>
+                <label for="iva1">Porcentaje de IVA:</label>
+                <input type="text" class="form-control" name="iva1" value="" placeholder="Porcentaje de IVA"><br>
+                <label for="descuento1">Porcentaje de descuento del movimiento:</label>
+                <input type="text" class="form-control" name="descuento1" value="" placeholder="Porcentaje de descuento del movimiento"><br>
+                <button type="button" class="btn btn-primary" id="calcular1">Calcular</button>
+              </form>
+            </div>
+
+            <div class="jumbotron">
+              <p>Partida 2</p>
+              <form class="" name="partida2">
+                <label for="cantidad2">Cantidad:</label>
+                <input type="text" class="form-control" name="cantidad2" value="" placeholder="Cantidad"><br>
+                <label for="codProd2">Codigo de producto:</label>
+                <input type="text" class="form-control" name="codProd2" value="" placeholder="Codigo de producto"><br>
+                <label for="precio2">Precio:</label>
+                <input type="text" class="form-control" name="precio2" value="" placeholder="Precio"><br>
+                <label for="iva2">Porcentaje de IVA:</label>
+                <input type="text" class="form-control" name="iva2" value="" placeholder="Porcentaje de IVA"><br>
+                <label for="descuento2">Porcentaje de descuento del movimiento:</label>
+                <input type="text" class="form-control" name="descuento2" value="" placeholder="Porcentaje de descuento del movimiento"><br>
+                <button type="button" class="btn btn-primary" id="calcular2">Calcular</button>
+              </form>
+            </div>
+
+            <div class="jumbotron">
+              <p>Partida 3</p>
+              <form class="" name="partida3">
+                <label for="cantidad3">Cantidad:</label>
+                <input type="text" class="form-control" name="cantidad3" value="" placeholder="Cantidad"><br>
+                <label for="codProd3">Codigo de producto:</label>
+                <input type="text" class="form-control" name="codProd3" value="" placeholder="Codigo de producto"><br>
+                <label for="precio3">Precio:</label>
+                <input type="text" class="form-control" name="precio3" value="" placeholder="Precio"><br>
+                <label for="iva3">Porcentaje de IVA:</label>
+                <input type="text" class="form-control" name="iva3" value="" placeholder="Porcentaje de IVA"><br>
+                <label for="descuento3">Porcentaje de descuento del movimiento:</label>
+                <input type="text" class="form-control" name="descuento3" value="" placeholder="Porcentaje de descuento del movimiento"><br>
+                <button type="button" class="btn btn-primary" id="calcular3">Calcular</button>
+              </form>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+        </form>
+
+        <p id="error" class="text-danger"></p>
+        <p id="max"></p>
+        <p id="min"></p>
+        <p id="avg"></p>
       </div>
     </div>
 
